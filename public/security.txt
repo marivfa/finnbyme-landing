@@ -1,0 +1,3 @@
+Contact: mailto:soporte@finnbyme.com
+Preferred-Languages: en
+Policy: https://finnbyme.com/policy.html

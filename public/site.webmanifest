@@ -1,0 +1,14 @@
+{
+    "name": "Finn by Me",
+    "short_name": "Finn",
+    "icons": [
+        {
+            "src": "/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#0095FF",
+    "background_color": "#FFFFFF",
+    "display": "standalone"
+}

@@ -1,0 +1,940 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <!-- Primary SEO -->
+    <title>FinnByMe — Expense Tracker & Shared Budget Planner (Web App)</title>
+    <meta name="description"
+        content="Expense tracker to log income, expenses, and goals—see a clear monthly snapshot, build habits, and share categories with someone you trust." />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <link rel="canonical" href="https://finnbyme.com/en/" />
+
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="en" href="https://finnbyme.com/en/" />
+    <link rel="alternate" hreflang="es" href="https://finnbyme.com/es/" />
+    <link rel="alternate" hreflang="x-default" href="https://finnbyme.com/en/" />
+
+    <!-- App meta -->
+    <meta name="theme-color" content="#0095FF" />
+    <meta name="application-name" content="FinnByMe" />
+    <meta name="apple-mobile-web-app-title" content="FinnByMe" />
+    <meta name="color-scheme" content="light" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="FinnByMe" />
+    <meta property="og:url" content="https://finnbyme.com/en/" />
+    <meta property="og:title" content="FinnByMe — Expense Tracker & Shared Budget Planner (Web App)" />
+    <meta property="og:description"
+        content="Track income, expenses, and goals in one calm place—see where your money goes and what to do next." />
+    <meta property="og:image" content="https://finnbyme.com/assets/images/og-cover-en.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="FinnByMe app preview showing a monthly financial snapshot dashboard" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="es_ES" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="FinnByMe — Expense Tracker & Shared Budget Planner (Web App)" />
+    <meta name="twitter:description"
+        content="Tracking for income, expenses, budgets, and goals—built for calm, consistent money habits." />
+    <meta name="twitter:image" content="https://finnbyme.com/assets/images/og-cover-en.png" />
+    <meta name="twitter:image:alt" content="FinnByMe app preview with monthly snapshot dashboard" />
+    <!-- Optional :
+  <meta name="twitter:site" content="@finnbyme" />
+  -->
+
+    <!-- Icons / PWA -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/logo/logo-placeholder.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles/main.css" />
+
+    <!-- Structured data: Organization + WebSite + SoftwareApplication -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://finnbyme.com/#organization",
+        "name": "FinnByMe",
+        "url": "https://finnbyme.com/",
+        "logo": "https://finnbyme.com/assets/logo/logo.png"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://finnbyme.com/#website",
+        "url": "https://finnbyme.com/",
+        "name": "FinnByMe",
+        "publisher": { "@id": "https://finnbyme.com/#organization" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://finnbyme.com/en/#webpage",
+        "url": "https://finnbyme.com/en/",
+        "name": "FinnByMe — Expense Tracker & Shared Budget Planner (Web App)",
+        "isPartOf": { "@id": "https://finnbyme.com/#website" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://finnbyme.com/#app",
+        "name": "FinnByMe",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "url": "https://finnbyme.com/en/",
+        "description": "Privacy-first web app to track income, expenses, and goals for calm financial clarity.",
+        "publisher": { "@id": "https://finnbyme.com/#organization" },
+        "image": "https://finnbyme.com/assets/images/og-cover-en.png",
+        "keywords": "expense tracker, budget planner, shared expenses, personal finance web app"
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-white text-ink antialiased">
+    <a href="#main"
+        class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-white focus:px-3 focus:py-2 focus:rounded-md focus:shadow-soft">
+        Skip to content
+    </a>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-surface/80 backdrop-blur border-b border-border">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+            <div class="flex h-16 items-center justify-between">
+
+                <a href="/en/" class="flex items-center gap-3 font-semibold">
+                    <img src="/assets/logo/logo.png" alt="FinnByMe"
+                        class="h-12 w-12 sm:h-14 sm:w-14 object-contain scale-[1.12] origin-left" />
+
+                    <span class="text-xl sm:text-2xl font-bold tracking-tight text-ink leading-none">
+                        Finn<span class="text-brand font-semibold">ByMe</span>
+                    </span>
+                </a>
+
+                <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-text">
+                    <a class="hover:text-ink" href="#who">Who it’s for</a>
+                    <a class="hover:text-ink" href="#problem">Why it matters</a>
+                    <a class="hover:text-ink" href="#path">The path</a>
+                    <a class="hover:text-ink" href="#how">How it works</a>
+                    <a class="hover:text-ink" href="#trust">Trust</a>
+                </nav>
+
+                <div class="hidden md:flex items-center gap-3">
+                    <!-- Language switcher -->
+                    <div class="flex items-center gap-1 rounded-xl border border-border bg-white p-1">
+                        <a href="/en/"
+                            class="px-2.5 py-2 text-xs rounded-xl bg-brand/10 text-ink border border-brand/20"
+                            aria-label="English">EN</a>
+                        <a href="/es/" class="px-2.5 py-2 text-xs rounded-xl text-text hover:bg-surface"
+                            aria-label="Spanish">ES</a>
+                    </div>
+                    <a href="https://app.finnbyme.com/"
+                        class="inline-flex items-center justify-center rounded-xl bg-brand px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brandHover focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2">
+                        Try now
+                    </a>
+                </div>
+
+                <button id="menuBtn"
+                    class="md:hidden inline-flex items-center justify-center rounded-lg border border-border px-3 py-2 text-sm text-ink hover:bg-surface focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+                    aria-expanded="false" aria-controls="mobileMenu">
+                    Menu
+                </button>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobileMenu" class="md:hidden hidden pb-4">
+                <nav class="flex flex-col gap-2 text-sm text-text">
+                    <div class="flex items-center justify-between px-3 py-2">
+                        <span class="text-xs text-muted">Language</span>
+                        <div class="flex items-center gap-1 rounded-xl border border-border bg-white p-1">
+                            <a href="/en/"
+                                class="px-2.5 py-2 text-xs rounded-xl bg-brand/10 text-ink border border-brand/20"
+                                aria-label="English">EN</a>
+                            <a href="/es/" class="px-2.5 py-2 text-xs rounded-xl text-text hover:bg-surface"
+                                aria-label="Spanish">ES</a>
+                        </div>
+                    </div>
+
+                    <a class="rounded-lg px-3 py-2 hover:bg-surface hover:text-ink" href="#who">Who it’s for</a>
+                    <a class="rounded-lg px-3 py-2 hover:bg-surface hover:text-ink" href="#problem">Why it matters</a>
+                    <a class="rounded-lg px-3 py-2 hover:bg-surface hover:text-ink" href="#path">The path</a>
+                    <a class="rounded-lg px-3 py-2 hover:bg-surface hover:text-ink" href="#how">How it works</a>
+                    <a class="rounded-lg px-3 py-2 hover:bg-surface hover:text-ink" href="#trust">Trust</a>
+                    <a class="mt-2 inline-flex items-center justify-center rounded-xl bg-brand px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brandHover"
+                        href="https://app.finnbyme.com/">
+                        Try now
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- Hero -->
+        <section class="relative">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6 pt-14 pb-12 sm:pt-20 sm:pb-16">
+                <div class="grid items-center gap-10 lg:grid-cols-2">
+                    <!-- Copy -->
+                    <div class="reveal">
+                        <h1 class="mt-5 text-4xl font-semibold leading-tight tracking-tight text-ink sm:text-6xl">
+                            Understanding money<br class="hidden sm:block" />
+                            shouldn’t feel<br class="hidden sm:block" />
+                            overwhelming
+                        </h1>
+
+                        <p class="mt-4 max-w-xl text-lg text-text">
+                            Track income, expenses, and goals in one calm place — so you can see where your money goes
+                            and what to do next.
+                        </p>
+
+                        <ul class="mt-6 grid max-w-xl gap-3 text-sm text-text sm:grid-cols-2">
+                            <li class="flex items-start gap-2">
+                                <span class="check mt-0.5 shrink-0" aria-hidden="true"></span>
+                                <span>Monthly snapshot: income, spending, budget</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="check mt-0.5 shrink-0" aria-hidden="true"></span>
+                                <span>Simple tracking that builds habits</span>
+                            </li>
+                            <li class="flex items-start gap-2 sm:col-span-2">
+                                <span class="check mt-0.5 shrink-0" aria-hidden="true"></span>
+                                <span>Privacy-first — we don’t sell your data</span>
+                            </li>
+                        </ul>
+
+                        <div class="mt-8 flex flex-wrap items-center gap-4">
+                            <a href="https://app.finnbyme.com/"
+                                class="inline-flex items-center justify-center rounded-xl bg-brand px-6 py-4 text-sm font-semibold text-white shadow-soft transition-all hover:bg-brandHover hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2">
+                                Try now
+                            </a>
+                            <a href="#how"
+                                class="inline-flex items-center justify-center rounded-xl border border-border bg-white px-6 py-4 text-sm font-semibold text-ink transition-all hover:bg-surface hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2">
+                                See how it works
+                            </a>
+                        </div>
+                        <p class="mt-4 text-xs text-muted">
+                            Web app — works great on desktop and mobile browser.
+                        </p>
+                    </div>
+
+                    <!-- dashboard preview -->
+                    <div class="reveal hero-preview-wrap">
+                        <div class="preview-shell hero-preview">
+                            <div class="preview-topbar">
+                                <div class="preview-title">
+                                    <span class="icon-chip" style="width:36px;height:36px;border-radius:14px;">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path d="M4 18h16" stroke-width="2" stroke-linecap="round"></path>
+                                            <path d="M6 15l4-5 4 3 4-6" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                    <div>
+                                        <h4>Your month at a glance</h4>
+                                        <p>Clarity, not clutter — just the essentials.</p>
+                                    </div>
+                                </div>
+
+                                <div class="text-xs text-muted font-medium">February</div>
+                            </div>
+
+                            <div class="preview-body">
+                                <div class="preview-grid">
+
+                                    <!-- Summary metrics -->
+                                    <div class="preview-metrics metrics-strip">
+                                        <!-- Income -->
+                                        <div class="metric-card" data-tone="income"
+                                            style="background: var(--color-income-bg);">
+                                            <div class="metric-header">
+                                                <span class="metric-icon">
+                                                    <!-- wallet -->
+                                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                                        aria-hidden="true">
+                                                        <path
+                                                            d="M17 7H7a4 4 0 0 0-4 4v6a3 3 0 0 0 3 3h11a4 4 0 0 0 4-4V11a4 4 0 0 0-4-4Z"
+                                                            stroke-width="2" stroke-linejoin="round"></path>
+                                                        <path d="M17 7V5a2 2 0 0 0-2-2H7" stroke-width="2"
+                                                            stroke-linecap="round"></path>
+                                                        <path d="M21 12h-6a2 2 0 0 0 0 4h6" stroke-width="2"
+                                                            stroke-linecap="round"></path>
+                                                    </svg>
+                                                </span>
+                                                <div class="metric-title">Monthly income</div>
+                                            </div>
+
+                                            <div class="metric-value">$2,450.00</div>
+
+                                            <div class="metric-delta pos">
+                                                +3.1% vs last month
+                                            </div>
+                                        </div>
+
+                                        <!-- Expenses -->
+                                        <div class="metric-card" data-tone="expense"
+                                            style="background: var(--color-expense-bg);">
+                                            <div class="metric-header">
+                                                <span class="metric-icon">
+                                                    <!-- receipt -->
+                                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                                        aria-hidden="true">
+                                                        <path d="M7 3h10v18l-2-1-2 1-2-1-2 1-2-1-2 1V3Z"
+                                                            stroke-width="2" stroke-linejoin="round"></path>
+                                                        <path d="M9 7h6M9 11h6M9 15h4" stroke-width="2"
+                                                            stroke-linecap="round"></path>
+                                                    </svg>
+                                                </span>
+                                                <div class="min-w-0">
+                                                    <div class="metric-title">Monthly expenses</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="metric-value">$1,820.45</div>
+                                            <div class="metric-delta neg">
+                                                -4.8% vs last month
+                                            </div>
+                                        </div>
+
+                                        <!-- Net cashflow -->
+                                        <div class="metric-card" data-tone="net"
+                                            style="background: var(--color-net-bg);">
+                                            <div class="metric-header">
+                                                <span class="metric-icon">
+                                                    <!-- activity -->
+                                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                                        aria-hidden="true">
+                                                        <path d="M22 12h-4l-3 7-6-14-3 7H2" stroke-width="2"
+                                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </span>
+                                                <div class="min-w-0">
+                                                    <div class="metric-title">Net cashflow</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="metric-value" style="color: var(--color-income);">+$629.55</div>
+                                            <div class="metric-delta pos">
+                                                +$74.20 vs last month
+                                            </div>
+                                        </div>
+
+                                        <!-- Budget -->
+                                        <div class="metric-card" data-tone="budget"
+                                            style="background: var(--color-budget-bg);">
+                                            <div class="metric-header">
+                                                <span class="metric-icon">
+                                                    <!-- target -->
+                                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                                        aria-hidden="true">
+                                                        <circle cx="12" cy="12" r="8" stroke-width="2"></circle>
+                                                        <circle cx="12" cy="12" r="4" stroke-width="2"></circle>
+                                                        <path d="M12 12l6-6" stroke-width="2" stroke-linecap="round">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                                <div class="min-w-0">
+                                                    <div class="metric-title">Budget status</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="metric-value">$1,820.45 / $2,200.00</div>
+                                            <div class="metric-delta pos">
+                                                82.7% spent (on track)
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Panels: chart + transactions -->
+                                    <div class="preview-panels">
+                                        <!-- Chart panel -->
+                                        <div class="panel">
+                                            <div class="panel-title">
+                                                <h5>Monthly overview</h5>
+                                            </div>
+
+                                            <!-- lightweight SVG chart -->
+                                            <svg viewBox="0 0 520 180" width="100%" height="180" role="img"
+                                                aria-label="Monthly overview chart">
+                                                <!-- grid -->
+                                                <path d="M40 20V150H500" fill="none" stroke="rgba(15,23,42,0.08)"
+                                                    stroke-width="2"></path>
+                                                <path d="M40 50H500M40 80H500M40 110H500M40 140H500" fill="none"
+                                                    stroke="rgba(15,23,42,0.05)" stroke-width="1"></path>
+
+                                                <!-- bars (3 months demo) -->
+                                                <!-- Jan -->
+                                                <rect x="90" y="80" width="26" height="70" rx="6"
+                                                    fill="var(--color-income)"></rect>
+                                                <rect x="120" y="60" width="26" height="90" rx="6"
+                                                    fill="var(--color-expense)"></rect>
+                                                <rect x="150" y="55" width="26" height="95" rx="6"
+                                                    fill="var(--color-budget)"></rect>
+
+                                                <!-- Feb -->
+                                                <rect x="230" y="75" width="26" height="75" rx="6"
+                                                    fill="var(--color-income)"></rect>
+                                                <rect x="260" y="70" width="26" height="80" rx="6"
+                                                    fill="var(--color-expense)"></rect>
+                                                <rect x="290" y="55" width="26" height="95" rx="6"
+                                                    fill="var(--color-budget)"></rect>
+
+                                                <!-- Mar -->
+                                                <rect x="370" y="70" width="26" height="80" rx="6"
+                                                    fill="var(--color-income)"></rect>
+                                                <rect x="400" y="75" width="26" height="75" rx="6"
+                                                    fill="var(--color-expense)"></rect>
+                                                <rect x="430" y="55" width="26" height="95" rx="6"
+                                                    fill="var(--color-budget)"></rect>
+
+                                                <!-- labels -->
+                                                <text x="102" y="168" font-size="11"
+                                                    fill="rgba(15,23,42,0.55)">Jan</text>
+                                                <text x="242" y="168" font-size="11"
+                                                    fill="rgba(15,23,42,0.55)">Feb</text>
+                                                <text x="382" y="168" font-size="11"
+                                                    fill="rgba(15,23,42,0.55)">Mar</text>
+                                            </svg>
+
+                                            <div class="mt-3 flex items-center gap-4 text-xs text-muted">
+                                                <span class="inline-flex items-center gap-2">
+                                                    <span class="inline-block h-2 w-2 rounded-full"
+                                                        style="background: var(--color-income);"></span> Income
+                                                </span>
+                                                <span class="inline-flex items-center gap-2">
+                                                    <span class="inline-block h-2 w-2 rounded-full"
+                                                        style="background: var(--color-expense);"></span> Expense
+                                                </span>
+                                                <span class="inline-flex items-center gap-2">
+                                                    <span class="inline-block h-2 w-2 rounded-full"
+                                                        style="background: var(--color-budget);"></span> Budget
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Right panel: transactions + budget bar -->
+                                        <div class="panel">
+                                            <div class="panel-title">
+                                                <h5>Last transactions</h5>
+                                                <span>Recent</span>
+                                            </div>
+
+                                            <div class="preview-transactions">
+                                                <div class="tx">
+                                                    <div class="tx-left">
+                                                        <div class="tx-badge"
+                                                            style="background: var(--color-income-bg);">
+                                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                                aria-hidden="true" style="stroke: var(--color-income);">
+                                                                <path d="M7 14l5-5 5 5" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                </path>
+                                                            </svg>
+                                                        </div>
+                                                        <div>
+                                                            <div class="tx-name">Paycheck</div>
+                                                            <div class="tx-date">Feb 24, 2026</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tx-amt pos">+$1,250.00</div>
+                                                </div>
+
+                                                <div class="tx">
+                                                    <div class="tx-left">
+                                                        <div class="tx-badge"
+                                                            style="background: var(--color-expense-bg);">
+                                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                                aria-hidden="true"
+                                                                style="stroke: var(--color-expense);">
+                                                                <path d="M7 3h10v18l-2-1-2 1-2-1-2 1-2-1-2 1V3z"
+                                                                    stroke-width="2" stroke-linejoin="round"></path>
+                                                                <path d="M9 7h6M9 11h6" stroke-width="2"
+                                                                    stroke-linecap="round"></path>
+                                                            </svg>
+                                                        </div>
+                                                        <div>
+                                                            <div class="tx-name">Groceries</div>
+                                                            <div class="tx-date">Feb 22, 2026</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tx-amt neg">-$154.12</div>
+                                                </div>
+
+                                                <div class="tx">
+                                                    <div class="tx-left">
+                                                        <div class="tx-badge" style="background: var(--color-net-bg);">
+                                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                                aria-hidden="true" style="stroke: var(--color-net);">
+                                                                <path d="M4 16l5-6 4 4 7-9" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                                </path>
+                                                            </svg>
+                                                        </div>
+                                                        <div>
+                                                            <div class="tx-name">Home & Utilities</div>
+                                                            <div class="tx-date">Feb 21, 2026</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tx-amt neg">-$204.80</div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section id="who" class="bg-white">
+            <div class="mx-auto max-w-4xl px-4 sm:px-6 py-12 sm:py-14">
+                <div class="text-center reveal">
+                    <h2 class="text-3xl font-semibold tracking-tight text-ink">
+                        Is FinnByMe right for you?
+                    </h2>
+                    <p class="mt-3 text-text">
+                        Built for people who want a simple system they’ll keep using.
+                    </p>
+                </div>
+
+                <ul class="mt-10 space-y-4 max-w-2xl mx-auto text-text text-base">
+                    <li class="flex items-start gap-3">
+                        <span class="check mt-1 shrink-0" aria-hidden="true"></span>
+                        You feel unsure where your money actually goes
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="check mt-1 shrink-0" aria-hidden="true"></span>
+                        You’re tired of spreadsheets and want something simpler
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="check mt-1 shrink-0" aria-hidden="true"></span>
+                        You’ve tried budgeting before but couldn’t stick with it
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <span class="check mt-1 shrink-0" aria-hidden="true"></span>
+                        You manage shared expenses (couples, families, roommates)
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="check mt-1 shrink-0" aria-hidden="true"></span>
+                        You’re ready to build confident money habits
+                    </li>
+                </ul>
+
+                <div class="mt-12 reveal bg-brand/5 border-l-4 border-brand p-6 rounded-r-lg">
+                    <p class="text-sm font-semibold text-ink">Built-in collaboration</p>
+                    <p class="mt-1 text-sm text-text">
+                        Share specific categories with someone you trust — you control what’s shared, and you can remove
+                        access anytime.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem -->
+        <section id="problem" class="bg-surface border-y border-border">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6 py-14 sm:py-16">
+                <div class="reveal text-center">
+                    <h2 class="text-3xl font-semibold tracking-tight text-ink">The challenges everyone faces</h2>
+                    <p class="mt-3 mx-auto max-w-2xl text-text">
+                        Financial clarity shouldn't be this hard.
+                    </p>
+                </div>
+
+                <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                    <!-- Money disappears -->
+                    <article class="reveal rounded-3xl border border-border bg-white p-6 shadow-card card-hover">
+                        <div class="mb-4 icon-chip metric-net">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M4 16l5-6 4 4 7-9" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-ink">Money disappears</h3>
+                        <p class="mt-2 text-text">You earn, you spend, but where did it all go?</p>
+                    </article>
+
+                    <!-- Expenses pile up -->
+                    <article class="reveal rounded-3xl border border-border bg-white p-6 shadow-card card-hover">
+                        <div class="mb-4 icon-chip metric-expense">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M7 3h10v18l-2-1-2 1-2-1-2 1-2-1-2 1V3z" stroke-width="2"
+                                    stroke-linejoin="round"></path>
+                                <path d="M9 7h6M9 11h6" stroke-width="2" stroke-linecap="round"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-ink">Expenses pile up</h3>
+                        <p class="mt-2 text-text">Small purchases add up fast without visibility.</p>
+                    </article>
+
+                    <!-- Goals feel distant -->
+                    <article class="reveal rounded-3xl border border-border bg-white p-6 shadow-card card-hover">
+                        <div class="mb-4 icon-chip metric-budget">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z" stroke-width="2"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-ink">Goals feel distant</h3>
+                        <p class="mt-2 text-text">Hard to make progress without a clear plan.</p>
+                    </article>
+
+                    <!-- Budget feels unclear -->
+                    <article class="reveal rounded-3xl border border-border bg-white p-6 shadow-card card-hover">
+                        <div class="mb-4 icon-chip metric-income">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M12 20V4" stroke-width="2" stroke-linecap="round"></path>
+                                <path d="M7 9l5-5 5 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-ink">Budgets feel hard</h3>
+                        <p class="mt-2 text-text">Staying on track is easier when you can see the numbers.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Path -->
+        <section id="path">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6 py-14 sm:py-16">
+                <div class="reveal text-center">
+                    <h2 class="text-3xl font-semibold tracking-tight text-ink">Your path to financial clarity</h2>
+                    <p class="mt-3 mx-auto max-w-2xl text-text">
+                        A simple, calm tool designed to help you understand and improve your financial life — step by
+                        step.
+                    </p>
+                </div>
+
+                <div class="mt-10 reveal rounded-2xl border border-border bg-white shadow-card p-6">
+                    <div class="grid gap-6 lg:grid-cols-4">
+                        <div>
+                            <p class="font-semibold text-ink">Awareness</p>
+                            <p class="mt-2 text-sm text-text">Know exactly where your money comes from and where it
+                                goes.</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-ink">Clarity</p>
+                            <p class="mt-2 text-sm text-text">Visual insights reveal patterns you didn’t notice before.
+                            </p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-ink">Planning</p>
+                            <p class="mt-2 text-sm text-text">Set goals, plan ahead, and make decisions without
+                                guesswork.</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-ink">Confidence</p>
+                            <p class="mt-2 text-sm text-text">Feel in control and improve month by month.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 h-2 rounded-full bg-surface overflow-hidden">
+                        <div class="h-2 w-2/3 rounded-full bg-brand"></div>
+                    </div>
+                    <p class="mt-2 text-xs text-muted">Progress over perfection — always.</p>
+                </div>
+
+                <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 items-stretch">
+
+                    <article class="reveal card-strong card-hover text-center">
+                        <span class="icon-chip icon-income mb-4">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 4v8" stroke-width="2" stroke-linecap="round"></path>
+                                <path d="M8 8l4-4 4 4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <path d="M12 20v-8" stroke-width="2" stroke-linecap="round"></path>
+                                <path d="M16 16l-4 4-4-4" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                        <h3 class="text-lg font-semibold text-ink">Track income & expenses</h3>
+                        <p class="card-desc mt-2">See exactly where your money comes from and where it goes.</p>
+                    </article>
+
+                    <article class="reveal card-strong card-hover text-center">
+                        <span class="icon-chip icon-expense mb-4" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                <path d="M4 18h16" stroke-width="2" stroke-linecap="round"></path>
+                                <path d="M6 15l4-5 4 3 4-6" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                        <h3 class="text-lg font-semibold text-ink">See your spending</h3>
+                        <p class="card-desc mt-2">Visual insights reveal habits and opportunities.</p>
+                    </article>
+
+                    <article class="reveal card-strong card-hover text-center">
+                        <span class="icon-chip icon-budget mb-4" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="8" stroke-width="2"></circle>
+                                <circle cx="12" cy="12" r="4" stroke-width="2"></circle>
+                            </svg>
+                        </span>
+                        <h3 class="text-lg font-semibold text-ink">Set goals & budgets</h3>
+                        <p class="card-desc mt-2">Set goals and track progress with calm, steady momentum.</p>
+                    </article>
+
+                    <article class="reveal card-strong card-hover text-center">
+                        <span class="icon-chip icon-net mb-4" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                <circle cx="6" cy="6" r="2" stroke-width="2"></circle>
+                                <circle cx="18" cy="6" r="2" stroke-width="2"></circle>
+                                <circle cx="12" cy="18" r="2" stroke-width="2"></circle>
+
+                                <path d="M6 8v4l6 4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <path d="M18 8v4l-6 4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </svg>
+                        </span>
+                        <h3 class="text-lg font-semibold text-ink">Make better decisions</h3>
+                        <p class="card-desc mt-2">Learn and improve month by month.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="bg-white">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6 py-14 sm:py-16">
+                <div class="reveal text-center mx-auto max-w-3xl">
+                    <h2 class="text-3xl font-semibold tracking-tight text-ink">Money is a skill you
+                        can learn</h2>
+                    <p class="mt-4 text-text">Most of us were never taught how money really works, not in school, not
+                        in real life.</p>
+                    <p class="mt-4 text-text">When you understand where your money goes, you gain control. When you
+                        track progress, confidence grows.</p>
+                    <p class="mt-6 text-text">You don’t need to be perfect. You just need to start.</p>
+
+                    <div class="mt-12 reveal bg-brand/5 border-l-4 border-brand p-6 rounded-r-lg">
+                        <p class="text-ink font-medium">
+                            Start where you are. Understand what matters. Build the future you want.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it works -->
+        <section id="how" class="bg-surface border-y border-border">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6 py-14 sm:py-16">
+                <div class="reveal text-center">
+                    <h2 class="text-3xl font-semibold tracking-tight text-ink">How it works</h2>
+                    <p class="mt-3 mx-auto max-w-2xl text-text">
+                        Four simple steps to take control of your financial life.
+                    </p>
+                </div>
+
+                <!-- ROWS (instead of 4 columns) -->
+                <ol class="mt-12 flex flex-col gap-6">
+
+                    <li class="reveal card-strong card-hover p-6">
+                        <div class="flex items-start gap-5">
+                            <span class="icon-chip shrink-0 font-bold text-lg">1</span>
+
+                            <div class="min-w-0">
+                                <h3 class="text-lg font-bold text-ink">
+                                    Add your finances
+                                </h3>
+                                <p class="mt-1 text-sm text-text leading-relaxed">
+                                    Enter income, expenses, and goals (your pace, your way).
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="reveal card-strong card-hover p-6">
+                        <div class="flex items-start gap-5">
+                            <span class="icon-chip shrink-0 font-bold text-lg">2</span>
+
+                            <div class="min-w-0">
+                                <h3 class="text-lg font-bold text-ink">
+                                    Track month by month
+                                </h3>
+                                <p class="mt-1 text-sm text-text leading-relaxed">
+                                    Log transactions and keep your picture up to date.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="reveal card-strong card-hover p-6">
+                        <div class="flex items-start gap-5">
+                            <span class="icon-chip shrink-0 font-bold text-lg">3</span>
+
+                            <div class="min-w-0">
+                                <h3 class="text-lg font-bold text-ink">
+                                    Get clear insights
+                                </h3>
+                                <p class="mt-1 text-sm text-text leading-relaxed">
+                                    See patterns, trends, and educational estimates.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="reveal card-strong card-hover p-6">
+                        <div class="flex items-start gap-5">
+                            <span class="icon-chip shrink-0 font-bold text-lg">4</span>
+
+                            <div class="min-w-0">
+                                <h3 class="text-lg font-bold text-ink">
+                                    Improve steadily
+                                </h3>
+                                <p class="mt-1 text-sm text-text leading-relaxed">
+                                    Build habits and confidence over time.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                </ol>
+
+            </div>
+        </section>
+
+        <!-- Trust -->
+        <section id="trust">
+            <div class="mx-auto max-w-6xl px-4 sm:px-6 py-14 sm:py-16">
+                <div class="reveal text-center">
+                    <h2 class="text-3xl font-semibold tracking-tight text-ink">Built on trust and transparency</h2>
+                    <p class="mt-3 mx-auto max-w-2xl text-text">
+                        Privacy-first, no selling your data.
+                    </p>
+                </div>
+
+                <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                    <article class="reveal card-strong card-hover">
+                        <div class="card-title">
+                            <span class="icon-chip icon-trust-security">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                    <path d="M12 2l8 4v6c0 5-3.5 9.5-8 10-4.5-.5-8-5-8-10V6l8-4z" stroke-width="2"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                            <h3 class="text-base">Privacy-first</h3>
+                        </div>
+                        <p class="card-desc">Your data stays yours.</p>
+                    </article>
+
+                    <article class="reveal card-strong card-hover">
+                        <div class="card-title">
+                            <span class="icon-chip icon-trust-simple" aria-hidden="true">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                    <path d="M6 12h12" stroke-width="2" stroke-linecap="round"></path>
+                                    <path d="M9 8h6" stroke-width="2" stroke-linecap="round"></path>
+                                    <path d="M10 16h4" stroke-width="2" stroke-linecap="round"></path>
+                                </svg>
+                            </span>
+                            <h3 class="text-base">Simplicity</h3>
+                        </div>
+                        <p class="card-desc">Only what matters for clarity and progress.</p>
+                    </article>
+                    <article class="reveal card-strong card-hover">
+                        <div class="card-title">
+                            <span class="icon-chip icon-trust-human" aria-hidden="true">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="9" stroke-width="2"></circle>
+                                    <circle cx="12" cy="10" r="3" stroke-width="2"></circle>
+                                    <path d="M6.5 18c1.8-2.5 9.2-2.5 11 0" stroke-width="2" stroke-linecap="round">
+                                    </path>
+                                </svg>
+                            </span>
+                            <h3 class="text-base">Made for real people</h3>
+                        </div>
+                        <p class="card-desc">A guide, not a judge.</p>
+                    </article>
+                </div>
+
+                <div class="mt-10 reveal rounded-2xl border border-border bg-white p-6 shadow-card">
+                    <p class="text-sm font-semibold">Designed for real clarity, not growth hacks.</p>
+                    <p class="mt-2 text-ink text-muted">We've built this app to help people genuinely understand
+                        their finances. No dark patterns. No algorithmic manipulation. Just honest tools that respect
+                        your time and attention.</p>
+                </div>
+
+                <p class="mt-6 text-xs text-muted text-center">
+                    Many users also use FinnByMe to track petty cash, small business expenses, or travel reimbursements.
+                </p>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section id="access" class="bg-brand/5 border-t border-border">
+            <div class="mx-auto max-w-4xl px-4 sm:px-6 py-14 sm:py-16">
+                <div class="reveal text-center">
+                    <h2 class="text-3xl font-semibold tracking-tight text-ink">Ready to understand your money?</h2>
+                    <p class="mt-4 text-lg text-text">
+                        Start building better money habits today.
+                    </p>
+
+                    <div class="mt-8 flex justify-center">
+                        <a href="https://app.finnbyme.com/"
+                            class="inline-flex items-center justify-center rounded-xl bg-brand px-8 py-4 text-base font-semibold text-white shadow-soft transition-all hover:bg-brandHover hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2">
+                            Try now
+                        </a>
+                    </div>
+
+                    <p class="mt-6 text-sm text-muted">
+                        Web app · Fast setup · Privacy-first · No spam.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-border bg-white">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10">
+            <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                    <p class="text-sm text-muted">© <span id="year"></span> FinnByMe. All rights reserved.</p>
+                </div>
+
+                <a href="https://www.mokaristudio.com/index.html" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-1 hover:opacity-80 transition-opacity">
+                    <p class="text-xs text-muted">Powered by</p>
+                    <div class="flex items-center gap-1">
+                        <img src="/assets/images/mokari-logo.png" alt="Mokari Logo" class="h-6 w-6" />
+                        <p class="text-base font-light text-ink">Mokari</p>
+                    </div>
+                </a>
+
+                <div class="flex items-center gap-4 text-sm text-text">
+                    <a href="/en/privacy.html" class="hover:text-ink">Privacy</a>
+                    <a href="/en/terms.html" class="hover:text-ink">Terms</a>
+                    <a href="mailto:hello@finnbyme.com" class="hover:text-ink">Contact</a>
+                </div>
+            </div>
+
+            <p class="mt-6 text-xs text-muted">
+                Disclaimer: This app provides financial insights and estimates for informational purposes only. It is
+                not tax, legal, or professional financial advice. Please consult qualified professionals for specific
+                guidance regarding your financial situation.
+            </p>
+        </div>
+    </footer>
+
+    <script type="module" src="/scripts/main.js"></script>
+</body>
+
+</html>

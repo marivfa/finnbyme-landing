@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>Contáctanos — FinnByMe</title>
+    <meta name="description"
+        content="Ponte en contacto con FinnByMe para comentarios, sugerencias, problemas técnicos o colaboración." />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://finnbyme.com/es/contact.html" />
+
+    <meta name="theme-color" content="#0095FF" />
+
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/logo/logo-placeholder.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <link rel="stylesheet" href="/styles/main.css" />
+</head>
+
+<body class="bg-white text-ink antialiased">
+    <a href="#main"
+        class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-white focus:px-3 focus:py-2 focus:rounded-md focus:shadow-soft">
+        Saltar al contenido
+    </a>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-border">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6">
+            <div class="flex h-16 items-center justify-between">
+                <a href="/es/" class="flex items-center gap-3 font-semibold">
+                    <img src="/assets/logo/logo.png" alt="FinnByMe"
+                        class="h-12 w-12 sm:h-14 sm:w-14 object-contain scale-[1.12] origin-left" />
+
+                    <span class="text-xl sm:text-2xl font-bold tracking-tight text-ink leading-none">
+                        Finn<span class="text-brand font-semibold">ByMe</span>
+                    </span>
+                </a>
+
+                <a href="/es/" class="text-sm font-medium text-text hover:text-ink">Volver al Inicio</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main" class="mx-auto max-w-2xl px-4 sm:px-6 py-12 sm:py-16">
+        <h1 class="text-3xl font-bold tracking-tight text-ink sm:text-4xl">Contáctanos</h1>
+        <p class="mt-4 text-lg text-text">Nos encantaría escucharte. Envíanos un mensaje y te responderemos lo antes
+            posible.</p>
+
+        <div class="mt-10">
+            <div id="contactSuccess" class="success-message">
+                <div class="flex justify-center mb-4">
+                    <span class="check" aria-hidden="true" style="width: 48px; height: 48px;"></span>
+                </div>
+                <h3 class="text-xl font-bold text-ink mb-2">¡Mensaje enviado!</h3>
+                <p class="text-text">Gracias por ponerte en contacto. Hemos recibido tu mensaje y nos comunicaremos
+                    pronto.</p>
+                <button type="button" onclick="location.reload()"
+                    class="mt-6 inline-flex items-center justify-center rounded-xl border border-border bg-white px-6 py-2 text-sm font-semibold text-ink hover:bg-surface">
+                    Enviar otro mensaje
+                </button>
+            </div>
+
+            <form id="contactForm" class="space-y-6 reveal is-visible">
+                <div class="grid gap-6 sm:grid-cols-2">
+                    <div>
+                        <label for="name" class="form-label">Nombre (opcional)</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre">
+                    </div>
+                    <div>
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com"
+                            required>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="type" class="form-label">Tipo de mensaje</label>
+                    <select id="type" name="type" class="form-select" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="feedback">Feedback sobre la app</option>
+                        <option value="suggestion">Sugerencia</option>
+                        <option value="technical">Problema técnico</option>
+                        <option value="collaboration">Colaboración / partnership</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="message" class="form-label">Mensaje</label>
+                    <textarea id="message" name="message" class="form-textarea" placeholder="¿Cómo podemos ayudarte?"
+                        required></textarea>
+                </div>
+
+                <div>
+                    <button type="submit"
+                        class="w-full inline-flex items-center justify-center rounded-xl bg-brand px-6 py-4 text-base font-semibold text-white shadow-soft transition-all hover:bg-brandHover hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2">
+                        Enviar mensaje
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="border-t border-border bg-white mt-12">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 py-10">
+            <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                    <p class="text-sm text-muted">© <span id="year"></span> FinnByMe. Todos los derechos reservados.</p>
+                </div>
+
+                <a href="https://www.mokaristudio.com/index.html" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-1 hover:opacity-80 transition-opacity">
+                    <p class="text-xs text-muted">Powered by</p>
+                    <div class="flex items-center gap-1">
+                        <img src="/assets/images/mokari-logo.png" alt="Mokari Logo" class="h-6 w-6" />
+                        <p class="text-base font-light text-ink">Mokari</p>
+                    </div>
+                </a>
+
+                <div class="flex items-center gap-4 text-sm text-text">
+                    <a href="/es/privacy.html" class="hover:text-ink">Privacidad</a>
+                    <a href="/es/terms.html" class="hover:text-ink">Términos</a>
+                    <a href="/es/contact.html" class="hover:text-ink font-medium text-ink">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/scripts/main.js"></script>
+</body>
+
+</html>

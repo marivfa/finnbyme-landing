@@ -1,0 +1,11 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="vis-grad" x1="24" y1="12" x2="24" y2="36" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#16A34A" />
+      <stop offset="1" stop-color="#15803D" />
+    </linearGradient>
+  </defs>
+  <path d="M10 24C10 24 16 14 24 14C32 14 38 24 38 24C38 24 32 34 24 34C16 34 10 24 10 24Z" fill="url(#vis-grad)" opacity="0.1" stroke="url(#vis-grad)" stroke-width="2" />
+  <circle cx="24" cy="24" r="4" fill="url(#vis-grad)" />
+  <path d="M18 36V30M24 36V28M30 36V32" stroke="url(#vis-grad)" stroke-width="2" stroke-linecap="round" />
+</svg>
